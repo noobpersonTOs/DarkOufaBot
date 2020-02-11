@@ -202,8 +202,8 @@ async def servers():
         embed = discord.Embed(description="Server Name: {}, Server ID: {}".format(server.name, server.id))
         await bot.say(embed=embed)
 	
-@commands.command()
-async def create_invite(self, ctx):
+@bot.command()
+async def create_invite(ctx):
     """Create instant invite"""
     link = await ctx.channel.create_invite(max_age = 300)
     await ctx.send("Here is an instant invite to your server: " + link)
