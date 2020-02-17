@@ -215,7 +215,7 @@ async def _clean(ctx, amount=100):
     await bot.delete_message(msg)
 	
 @bot.command(pass_context=True)
-async def userinfos(ctx, user: discord.Member = None):
+async def userinfo(ctx, user: discord.Member = None):
 	if user is None:
 		user = ctx.message.author
 	roles = [role for role in user.roles]
