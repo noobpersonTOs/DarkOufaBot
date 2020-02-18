@@ -235,7 +235,6 @@ async def _kill(ctx, user: discord.Member = None):
 	if user is None:
 		await bot.say("Usage: `{}kill [member] [reason]`".format(ctx.prefix))
 		return False
-	reason = arg
 	author = ctx.message.author
 	embed = discord.Embed(title="Yandere Push", url="https://i.imgur.com/Yok3zm8.gif", description="Oof", color=0x00ff00)
 	embed.set_Image(url="https://i.imgur.com/Yok3zm8.gif")
