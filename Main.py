@@ -5,7 +5,7 @@ import asyncio
 import os
 import inspect
 
-bot = commands.Bot(command_prefix="*")
+bot = commands.Bot(command_prefix=".")
 bot.remove_command("help")
 
 @bot.event
