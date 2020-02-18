@@ -238,12 +238,10 @@ async def _kill(ctx, user: discord.Member = None, *, arg = None):
 	if arg is None:
 		await bot.say("please provide a reason to {}".format(user.name))
 		return False
-	if user.server_permissions.kick_members:
-		return False
 	reason = arg
 	author = ctx.message.author
-	embed = discord.Embed(description="Oof", color=0x00ff00)
-	embed.set_thumbnail(url="https://tenor.com/view/yandere-roof-gif-9284921")
+	embed = discord.Embed(title="Oof", url="https://i.imgur.com/Yok3zm8.gif", description="Oof", color=0x00ff00)
+	embed.set_thumbnail(url="https://i.imgur.com/Yok3zm8.gif")
 	await bot.say(embed=embed)
 
 bot.run(os.environ['BOT_TOKEN'])
