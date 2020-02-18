@@ -231,12 +231,9 @@ async def userinfo(ctx, user: discord.Member = None):
 	await bot.send_message(ctx.message.channel, embed=embed)
 	
 @bot.command(name="kill", pass_context=True)
-async def _kill(ctx, user: discord.Member = None, *, arg = None):
+async def _kill(ctx, user: discord.Member = None):
 	if user is None:
 		await bot.say("Usage: `{}kill [member] [reason]`".format(ctx.prefix))
-		return False
-	if arg is None:
-		await bot.say("please provide a reason to {}".format(user.name))
 		return False
 	reason = arg
 	author = ctx.message.author
