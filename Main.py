@@ -229,5 +229,21 @@ async def userinfo(ctx, user: discord.Member = None):
 	embed.add_field(name=f"Roles ({len(roles)})", value=" ".join([role.mention for role in roles]))
 	embed.add_field(name="Top role:", value=user.top_role.mention)
 	await bot.send_message(ctx.message.channel, embed=embed)
+	
+@bot.command(name="kill", pass_context=True)
+async def _kill(ctx, user: discord.Member = None, *, arg = None):
+	if user is None:
+		await bot.say("Usage: `{}kill [member] [reason]`".format(ctx.prefix))
+		return False
+	if arg is None:
+		await bot.say("please provide a reason to {}".format(user.name))
+		return False
+	if user.server_permissions.kick_members:
+		return False
+	reason = arg
+	author = ctx.message.author
+	embed = discord.Embed(description="Oof", color=0x00ff00)
+	embed.set_thumbnail(url="https://tenor.com/view/yandere-roof-gif-9284921")
+	await bot.say(embed=embed)
 
 bot.run(os.environ['BOT_TOKEN'])
