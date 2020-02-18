@@ -237,7 +237,7 @@ async def _kill(ctx, user: discord.Member = None):
 		return False
 	author = ctx.message.author
 	embed = discord.Embed(title="Yandere Push", url="https://i.imgur.com/Yok3zm8.gif", description="Oof", color=0x00ff00)
-	embed.set_image(url="https://imgur.com/Yok3zm8")
+	embed.set_image(url="https://i.imgur.com/Yok3zm8.gif")
 	await bot.say(embed=embed)
 
 bot.run(os.environ['BOT_TOKEN'])
