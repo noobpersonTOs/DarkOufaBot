@@ -233,11 +233,11 @@ async def userinfo(ctx, user: discord.Member = None):
 @bot.command(name="kill", pass_context=True)
 async def _kill(ctx, user: discord.Member = None):
 	if user is None:
-		await bot.say("Usage: `{}kill [member] [reason]`".format(ctx.prefix))
+		await bot.say("Usage: `{}kill [member]`".format(ctx.prefix))
 		return False
 	author = ctx.message.author
 	embed = discord.Embed(title="Yandere Push", url="https://i.imgur.com/Yok3zm8.gif", description="Oof", color=0x00ff00)
-	embed.set_image(url="https://i.imgur.com/Yok3zm8.gifv")
+	embed.set_image(url="https://imgur.com/Yok3zm8")
 	await bot.say(embed=embed)
 
 bot.run(os.environ['BOT_TOKEN'])
