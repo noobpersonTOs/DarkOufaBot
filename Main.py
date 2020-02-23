@@ -10,7 +10,6 @@ bot.remove_command("help")
 
 @bot.event
 async def on_ready():
-	await bot.change_presence(game=discord.Game(name="watching Dark Oufa's server | Playing Fortnite"))
 	print("Logged in as")
 	print(bot.user.name)
 	print(bot.user.id)
