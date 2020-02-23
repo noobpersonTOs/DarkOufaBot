@@ -229,15 +229,5 @@ async def userinfo(ctx, user: discord.Member = None):
 	embed.add_field(name=f"Roles ({len(roles)})", value=" ".join([role.mention for role in roles]))
 	embed.add_field(name="Top role:", value=user.top_role.mention)
 	await bot.send_message(ctx.message.channel, embed=embed)
-	
-@bot.command(name="kill", pass_context=True)
-async def _kill(ctx, user: discord.Member = None):
-	if user is None:
-		await bot.say("Usage: `{}kill [member]`".format(ctx.prefix))
-		return False
-	author = ctx.message.author
-	embed = discord.Embed(title="Yandere Push", url="https://i.imgur.com/Yok3zm8.gif", description="Oof", color=0x00ff00)
-	embed.set_image(url="https://i.imgur.com/Yok3zm8.gif")
-	await bot.say(embed=embed)
 
 bot.run(os.environ['BOT_TOKEN'])
